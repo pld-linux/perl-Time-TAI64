@@ -12,6 +12,10 @@ my ($last, $tai, $log, $t, $diff);
 while (my $line = <>) {
 	($tai, $log) = split(' ', $line, 2);
 	$t = tai64nunix($tai);
+
+	# skip not tai64 formatted line
+	print $line and next unless $t;
+
 	$diff = $last ? $t - $last : 0;
 	printf "%s [+%.4f] %s", tai64nlocal($tai), $diff, $log;
 	$last = $t;
