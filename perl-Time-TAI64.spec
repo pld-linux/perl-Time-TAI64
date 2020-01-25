@@ -4,7 +4,6 @@
 
 %define		pdir	Time
 %define		pnam	TAI64
-%include	/usr/lib/rpm/macros.perl
 Summary:	Time::TAI64 - Perl extension for converting TAI64 strings into standard unix timestamps
 Name:		perl-Time-TAI64
 Version:	2.11
